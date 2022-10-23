@@ -1,0 +1,98 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 10%;
+}
+
+.about__me-image{
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem; 
+}
+
+.about__card{
+    background: var(--color-bg);
+    padding: 0.7rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    border-color: var(--color-light);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.about__card h3{
+    color: var(--color-white);
+}
+
+.about__icon{
+    font-size: 1.4rem;
+    line-height: 0.70rem;
+    outline: none;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate{
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90%, 90.1%
+    {
+        color:#424949;
+        text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+        color: rgba(255, 255, 255, 0.877);
+        text-shadow: 0 0 10px #AAB7B8,
+        0 0 20px #AAB7B8,
+        0 0 40px #AAB7B8,
+        0 0 80px #AAB7B8,
+        0 0 160px #AAB7B8;
+    }
+}
+
+.about__content p{
+    margin: 2rem 0 2.6rem;
+}
+.cta {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__me-image{
+        width: 70%;
+        margin: 2rem auto 4rem;
+    }
+    .about__content p{
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about__me-image{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .about__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem; 
+        margin: 0.5rem 0.5rem;
+    }
+    .about__content{
+        text-align: center;
+    }
+    .about__content p{
+        margin: 1.5rem 0;
+    }
+}
